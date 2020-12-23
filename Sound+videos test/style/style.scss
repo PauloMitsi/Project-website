@@ -1,0 +1,58 @@
+/* Color Theme Swatches in Hex */
+$BG-color-1-hex: #424140;
+$BG-color-2-hex: #d4cfcd;
+$BG-color-3-hex: #827f7e;
+$BG-color-4-hex: #52504f;
+$BG-color-5-hex: #696665;
+
+@mixin centralizegrid {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+}
+@mixin centralizeabs {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+body {
+    background-color: $BG-color-1-hex;
+    font-family: "Courier New", Courier, monospace;
+    @include centralizegrid();
+    transition: .8s;
+}
+.main {
+    video {
+        @include centralizeabs();
+        width: 900px;
+        transition: 0.6s;
+        opacity: 0;
+        transition-delay: 0.8s;
+        clip-path: polygon(15% 15%, 85% 15%, 85% 85%, 15% 85%);
+    }
+    .text {
+        @include centralizeabs();
+        @include centralizegrid();
+
+        cursor: default;
+        background-color: $BG-color-2-hex;
+        border-radius: 50px;
+        height: 50px;
+        width: 200px;
+        transition: 0.8s;
+        &:hover {
+            height: calc(348px * 0.7);
+            width: 630px;
+            border-radius: 0px;
+            background-color: transparent;
+            border-style: solid;
+            video:hover {
+                transition-delay: 0s;
+                opacity: 1;
+            }
+        }
+        &:hover{border-style: solid;}
+    }
+}
