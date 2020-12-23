@@ -3,6 +3,8 @@ let box = document.getElementById('box')
 let video = document.getElementById('video')
 let source = document.getElementById('s')
 let bg = document.getElementById('bg')
+let cons = [audio, box, video, bg,] 
+
 
 /*em vez de criar dois atributos no elemento "section", adicionei um eventlistener para facilitar o trabalho*/
 
