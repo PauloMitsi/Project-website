@@ -82,4 +82,8 @@ section .vid_transition {
   -webkit-transition: 0.8s;
   transition: 0.8s;
 }
+
+section .bg_transition {
+  background-color: red;
+}
 /*# sourceMappingURL=style.css.map */
