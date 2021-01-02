@@ -1,22 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Webpiano</title>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Webpiano</title>
-    <link rel="stylesheet" href="style/style.css">
-</head>
+        <link rel="stylesheet" href="style/reset.css" />
+        <link rel="stylesheet" href="style/style.css" />
+    </head>
 
-<body id="bg">
-    <section class="main">
-        <video class="video" id="video" autoplay loop>
-            <source src="Videos/pianoback.m4v" type="video/mp4" id="s">
-        </video>
-        <div class="text" id='box'>Let your mouse here</div>
-    </section>
-    <audio id='audio' hidden></audio>
-</body>
-<script src="script.js"></script>
+    <body>
+        <main>
+            <section>
+                
+                <video class="video" id="video" loop>
+                    <source aria-controls="false" src="Videos/pianoback.mkv" type="video/mkv" />
+                    <source src="Videos/pianoback.mp4" type="video/mp4" />
+                    <source src="Videos/pianoback.webm" type="video/webm" />
+                </video>
 
+                <div class="text" id="text">Click me!</div>
+
+                <div class="hint" id="hint" >
+                    You can stop by putting your mouse out
+                </div>
+            </section>
+
+            <audio id="audio" preload="metadata">
+                <source src="Audio/Liebestraum_no_.mp3" type="audio/mpeg" />
+                <source src="Audio/Liebestraum_no_3.ogg" type="audio/ogg" />
+            </audio>
+        </main>
+    </body>
+
+    <script src="script.js"></script>
 </html>
